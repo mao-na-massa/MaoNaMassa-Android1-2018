@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/corpo"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/cabeca"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_above="@+id/corpo"
+            android:layout_centerInParents="true"
+            android:layout_toEndOf="@+id/bracoesquerdo" />
+
+        <Button
+            android:id="@+id/bracoesquerdo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/corpo"
+            android:layout_toStartOf="@+id/corpo" />
+
+        <Button
+            android:id="@+id/bracodireito"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/corpo"
+            android:layout_toEndOf="@+id/corpo"/>
+
+        <Button
+            android:id="@+id/perna_esquerda"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:layout_alignStart="@+id/corpo"
+            android:layout_below="@+id/corpo" />
+
+        <Button
+            android:id="@+id/pe_esquerdo"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@+id/perna_esquerda"
+            android:layout_below="@+id/perna_esquerda" />
+
+        <Button
+            android:id="@+id/perna_direita"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:layout_alignEnd="@+id/corpo"
+            android:layout_below="@+id/corpo" />
+
+        <Button
+            android:id="@+id/pe_direito"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/perna_direita"
+            android:layout_below="@+id/perna_direita" />
+
+    </RelativeLayout>
+
+</LinearLayout>
