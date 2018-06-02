@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/corpo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="100dp"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/cabeca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/corpo"
+            android:layout_centerHorizontal="true"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/braco_direito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/corpo"
+            android:layout_alignTop="@id/corpo"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/braco_esquerdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/corpo"
+            android:layout_alignTop="@id/corpo"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/perna_esquerda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/corpo"
+            android:layout_toLeftOf="@id/corpo"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/perna_direita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/corpo"
+            android:layout_toRightOf="@id/corpo"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/olho_esquerdo"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignBaseline="@+id/cabeca"
+            android:layout_alignBottom="@+id/cabeca"
+            android:layout_alignStart="@+id/cabeca"
+            android:layout_marginStart="20dp"
+            android:background="#1DE9B6"/>
+
+        <Button
+            android:id="@+id/olho_direito"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignBaseline="@+id/cabeca"
+            android:layout_alignBottom="@+id/cabeca"
+            android:layout_alignEnd="@+id/cabeca"
+            android:layout_marginEnd="20dp"
+            android:background="#1DE9B6" />
+
+        <Button
+            android:id="@+id/boca"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_above="@+id/corpo"
+            android:layout_centerHorizontal="true"
+            android:background="#F44336" />
+
+    </RelativeLayout>
+
+</LinearLayout>
