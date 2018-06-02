@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/cabeca"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@id/cabeca"
+            android:background="#000000"
+
+            />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@id/cabeca"
+            android:background="#000000"
+
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/cabeca"
+            android:layout_centerHorizontal="true"
+            android:background="#fc0000"
+
+            />
+
+        <Button
+            android:id="@+id/corpo"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/cabeca"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/pernaL"
+            android:layout_width="70dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/corpo"
+            android:layout_alignLeft="@id/corpo"
+            />
+
+        <Button
+            android:id="@+id/pernaR"
+            android:layout_width="70dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/corpo"
+            android:layout_alignRight="@id/corpo"
+            />
+
+        <Button
+            android:id="@+id/bracoR"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cabeca"
+            android:layout_toRightOf="@id/corpo"
+            />
+        
+        <Button
+            android:id="@+id/bracoL"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cabeca"
+            android:layout_toLeftOf="@id/corpo"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
