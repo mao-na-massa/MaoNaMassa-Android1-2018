@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/corpo"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/braço"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/corpo" />
+
+        <Button
+            android:id="@+id/braço2"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/braço"
+            android:layout_toEndOf="@+id/corpo" />
+
+        <Button
+            android:id="@+id/perna"
+            android:layout_width="25dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/corpo"
+            android:layout_below="@+id/corpo" />
+
+        <Button
+            android:id="@+id/perna2"
+            android:layout_width="25dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/corpo"
+            android:layout_toEndOf="@+id/perna" />
+
+        <Button
+            android:id="@+id/cabeça"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/corpo"
+            android:layout_alignStart="@+id/corpo" />
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@id/cabeça"
+            android:layout_alignTop="@+id/cabeça"
+            android:background="#000080"/>
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@id/cabeça"
+            android:layout_alignTop="@+id/cabeça"
+            android:background="#000080"/>
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:layout_alignBottom="@id/cabeça"
+            android:background="#800000"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
