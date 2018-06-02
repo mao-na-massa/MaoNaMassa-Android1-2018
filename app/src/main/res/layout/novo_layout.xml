@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/corpo"
+            android:layout_width="80"
+            android:layout_height="150"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/cabeca"
+            android:layout_width="50"
+            android:layout_height="120dp"
+            android:layout_above="@+id/corpo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp" />
+
+        <Button
+            android:id="@+id/BracoDireito"
+            android:layout_width="50"
+            android:layout_height="120dp"
+            android:layout_alignBottom="@+id/corpo"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/perna" />
+
+        <Button
+            android:id="@+id/BracoEsquerdo"
+            android:layout_width="50"
+            android:layout_height="120dp"
+            android:layout_alignBottom="@+id/corpo"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/perna"
+            android:layout_width="50"
+            android:layout_height="150"
+            android:layout_alignEnd="@+id/cabeca"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="32dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="50"
+            android:layout_height="150"
+            android:layout_alignStart="@+id/button6"
+            android:layout_alignTop="@+id/perna" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="20"
+            android:layout_height="20"
+            android:layout_alignStart="@+id/cabeca"
+            android:layout_alignTop="@+id/cabeca"
+            android:layout_marginTop="29dp"
+            android:background="#200" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="20"
+            android:layout_height="20"
+            android:layout_alignEnd="@+id/cabeca"
+            android:layout_alignTop="@+id/button5"
+            android:background="#200" />
+
+        <Button
+            android:id="@+id/boca"
+            android:layout_width="50"
+            android:layout_height="15"
+            android:layout_alignBottom="@+id/cabeca"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:background="#800" />
+
+        <Button
+            android:id="@+id/capa"
+            android:layout_width="match_parent"
+            android:layout_height="80"
+            android:layout_above="@+id/cabeca"
+            android:layout_alignParentStart="true"
+            android:background="#809"
+            android:text="Tainha16" />
+
+
+        
+    </RelativeLayout>
+
+
+</LinearLayout>
