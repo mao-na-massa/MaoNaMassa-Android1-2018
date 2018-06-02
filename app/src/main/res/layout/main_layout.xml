@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/corpo"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/cabeca"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_above="@+id/corpo"
+            android:layout_alignStart="@+id/corpo"
+            android:layout_marginBottom="13dp" />
+
+        <Button
+            android:id="@+id/bracoE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/corpo"
+            android:layout_marginTop="46dp"
+            android:layout_toStartOf="@+id/corpo" />
+
+
+        <Button
+            android:id="@+id/bracoD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/corpo"
+            android:layout_marginTop="46dp"
+            android:layout_toStartOf="@+id/corpo" />
+        <Button
+            android:id="@+id/pernaD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/corpo"
+            android:layout_toRightOf="@+id/corpo" />
+
+
+        <Button
+            android:id="@+id/pernaE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/corpo"
+            android:layout_toLeftOf="@id/corpo"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
