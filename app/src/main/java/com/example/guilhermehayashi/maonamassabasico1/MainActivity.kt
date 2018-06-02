@@ -41,27 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        comidas.add(comida1)
-        comidas.add(comida2)
-        comidas.add(comida3)
-
-        botaoMaca.setOnClickListener({
-            comeuAlgo(comida=comida1)
-        })
-
-        botaoBanana.setOnClickListener({
-            comeuAlgo(comida=comida2)
-        })
-        botaoPao.setOnClickListener({
-            comeuAlgo(comida=comida3)
-        })
-        botaoMudarNome.setOnClickListener({
-            var intent = Intent(this, SegundaActivity::class.java)
-            intent.putParcelableArrayListExtra(MainActivity.companion.nameKey, nomes as ArrayList<Pessoa>)
-            startActivityForResult(intent, 100)
-        })
-
+        setContentView(R.layout.main_layout)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

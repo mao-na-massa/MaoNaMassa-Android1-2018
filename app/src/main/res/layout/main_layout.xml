@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/torso"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/esquerda"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/torso"
+        <Button
+        android:id="@+id/direita"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/torso"
+        <Button
+            android:id="@+id/perna"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/torso"
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/torso"
+            android:id="@+id/button"
+            android:background="@drawable/circle"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="grog"
+
+
+    </RelativeLayout>
+
