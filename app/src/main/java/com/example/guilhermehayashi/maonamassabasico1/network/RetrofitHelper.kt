@@ -2,6 +2,8 @@ package com.example.guilhermehayashi.maonamassabasico1.network
 
 import android.util.Log
 import com.example.guilhermehayashi.maonamassabasico1.BuildConfig
+import com.example.guilhermehayashi.maonamassabasico1.LoginActivity
+import com.example.guilhermehayashi.maonamassabasico1.MainActivity
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
@@ -27,7 +29,7 @@ object RetrofitHelper {
     private fun rebuildRetrofit() {
         val client = buildClient()
         retrofit = Retrofit.Builder()
-                .baseUrl("http://pokeapi.co/api/v2/")
+                .baseUrl(Api.url)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(buildGson()))
                 .client(client)
@@ -54,7 +56,7 @@ object RetrofitHelper {
     private fun addTokenInterceptor(builder: OkHttpClient.Builder): OkHttpClient.Builder {
         val tokenInterceptor = Interceptor { chain ->
             var newRequest = chain.request()
-            val accessToken = "YOUR_TOKEN" // TODO: get your token from shared prefs
+            val accessToken = Api.userToken
             newRequest = newRequest.newBuilder().addHeader("Authorization", "Token $accessToken").build()
             chain.proceed(newRequest)
         }
