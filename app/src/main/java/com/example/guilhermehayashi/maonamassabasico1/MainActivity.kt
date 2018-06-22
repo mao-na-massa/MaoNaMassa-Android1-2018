@@ -7,9 +7,7 @@ import android.util.Log
 import android.view.View
 import com.example.guilhermehayashi.maonamassabasico1.modelos.Comida
 import com.example.guilhermehayashi.maonamassabasico1.modelos.Pessoa
-import com.example.guilhermehayashi.maonamassabasico1.network.PokedexService
-import com.example.guilhermehayashi.maonamassabasico1.network.Pokemon
-import com.example.guilhermehayashi.maonamassabasico1.network.RetrofitHelper
+import com.example.guilhermehayashi.maonamassabasico1.network.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_layout.*
 import rx.android.schedulers.AndroidSchedulers
@@ -24,23 +22,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
-        var retrofit = RetrofitHelper.getRetrofit(false)
-        retrofit?.create(PokedexService::class.java)
-                ?.getPokemons()
-                ?.subscribeOn(Schedulers.io())
-                ?.observeOn(AndroidSchedulers.mainThread())
-                ?.subscribe({
-                    it?.results?.forEach({
-                        Log.d("Pokemon","Pokemon: ${it.name}")
-                    })
-                    it?.let {
-                        pokemonList.adapter = PokedexAdapter(it.results.toMutableList(), this)
-                    }
 
-                }, {
-                    Log.d("TAG", "Erro: ${it}")
-                })
 
+        novoPetButton.setOnClickListener {
+            val intent = Intent(this, NovoPetActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Api.list {
+            pokemonList.adapter = PetAdapter(it.results.toMutableList(), this)
+        }
     }
 
 }
