@@ -16,6 +16,15 @@ interface ApiService {
     @POST("api/${Api.path}/")
     fun save(@Body request: ApiSaveRequest): Observable<ApiDetailResponse>
 
+    @POST("api/${Api.path}/{id}/join/")
+    fun join(@Path("id") id: String): Observable<Unit>
+
+    @POST("api/${Api.path}/{id}/leave/")
+    fun leave(@Path("id") id: String): Observable<Unit>
+
+    @GET("api/${Api.tasksPath}/")
+    fun getTasks(@Query("date") date: String): Observable<ApiListResponse>
+
     @PATCH("api/${Api.path}/{id}/")
     fun update(@Path("id") id: String, @Body request: ApiSaveRequest): Observable<ApiDetailResponse>
 
@@ -77,17 +86,14 @@ open class ApiSaveRequest(
 
 open class ApiDetailResponse(
 
-        @SerializedName("dono")
-        @Expose var dono: User,
-
-        @SerializedName("nome")
+        @SerializedName("name")
         @Expose var nome: String,
 
-        @SerializedName("tipo")
-        @Expose var tipo: String,
+        @SerializedName("question")
+        @Expose var question: String,
 
-        @SerializedName("descricao")
-        @Expose var descricao: String,
+        @SerializedName("answer")
+        @Expose var answer: String,
 
         @SerializedName("id")
         @Expose var id: Int

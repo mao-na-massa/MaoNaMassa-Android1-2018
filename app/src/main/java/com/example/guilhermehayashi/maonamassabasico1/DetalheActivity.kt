@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import com.example.guilhermehayashi.maonamassabasico1.network.*
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.detalhe_activity.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class DetalheActivity: AppCompatActivity() {
 
@@ -14,11 +16,12 @@ class DetalheActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detalhe_activity)
         pet = Gson().fromJson(intent.extras.get("PET") as String, ApiDetailResponse::class.java)
-        Api.get(pet!!.id.toString(), {
-            nomeEditText.setText(it.nome)
-            descricaoEditText.setText(it.descricao)
-        })
-
+        Api.getTasks(SimpleDateFormat("YYYY-MM-dd").format(Date())){
+            it.results.forEach({
+                nomeEditText.setText(it.question)
+                descricaoEditText.setText(it.answer)
+            })
+        }
         updateButton.setOnClickListener {
             var nome = nomeEditText.text.toString()
             var descricao = descricaoEditText.text.toString()

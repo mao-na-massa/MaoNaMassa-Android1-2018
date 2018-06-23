@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Api.list {
-            pokemonList.adapter = PetAdapter(it.results.toMutableList(), this)
+            pokemonList.adapter = CourseAdapter(it.results.toMutableList(), this)
         }
     }
 
