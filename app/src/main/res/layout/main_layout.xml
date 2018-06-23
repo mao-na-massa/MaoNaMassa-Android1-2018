@@ -11,15 +11,39 @@
         android:layout_height="wrap_content"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         tools:listitem="@layout/pokemon_view_holder"
-        android:layout_centerInParent="true"
-        android:layout_above="@+id/novoPetButton"/>
+        android:layout_centerInParent="true"/>
 
-    <Button
-        android:id="@+id/novoPetButton"
+    <LinearLayout
+        android:id="@+id/barraNav"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:text="Criar novo Pet"/>
+        android:layout_height="60dp"
+        android:layout_alignBottom="@id/pokemonList">
+
+        <Button
+            android:id="@+id/Lista"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="Lista" />
+
+        <Button
+            android:id="@+id/novoPetButton"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="Doe" />
+
+        <Button
+            android:id="@+id/Perfil"
+            android:layout_width="wrap_content"
+            android:layout_marginRight=""
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="Perfil" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
