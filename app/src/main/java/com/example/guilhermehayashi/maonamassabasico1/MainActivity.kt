@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_layout)
 
 
-        novoPetButton.setOnClickListener {
+        novoLugarButton.setOnClickListener {
             val intent = Intent(this, NovoPetActivity::class.java)
             startActivity(intent)
         }
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Api.list {
-            pokemonList.adapter = PetAdapter(it.results.toMutableList(), this)
+            ListadeLugares.adapter = PetAdapter(it.results.toMutableList(), this)
         }
     }
 

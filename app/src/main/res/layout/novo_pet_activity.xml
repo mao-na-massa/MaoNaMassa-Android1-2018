@@ -11,9 +11,16 @@
         android:weightSum="2">
 
         <EditText
-            android:id="@+id/nomePetEditText"
+            android:id="@+id/nomeDoLocal"
             android:layout_width="match_parent"
-            android:hint="Nome do Pet"
+            android:hint="Nome do Local"
+            android:layout_height="55dp" />
+
+
+        <EditText
+            android:id="@+id/localizacaoEditText"
+            android:layout_width="match_parent"
+            android:hint="Localização"
             android:layout_height="55dp" />
 
         <Spinner
@@ -22,13 +29,8 @@
             android:layout_height="55dp" />
 
         <EditText
-            android:id="@+id/localizacaoEditText"
-            android:layout_width="match_parent"
-            android:hint="Localização"
-            android:layout_height="55dp" />
-
-        <EditText
             android:id="@+id/descricaoEditText"
+            android:hint= "Descrição"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:maxLines="10"

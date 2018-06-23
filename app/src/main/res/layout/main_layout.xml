@@ -6,20 +6,20 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/pokemonList"
+        android:id="@+id/ListadeLugares"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         tools:listitem="@layout/pokemon_view_holder"
         android:layout_centerInParent="true"
-        android:layout_above="@+id/novoPetButton"/>
+        android:layout_above="@+id/novoLugarButton"/>
 
     <Button
-        android:id="@+id/novoPetButton"
+        android:id="@+id/novoLugarButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:text="Criar novo Pet"/>
+        android:text="Cadastrar novo lugar"/>
 
 
 </RelativeLayout>
