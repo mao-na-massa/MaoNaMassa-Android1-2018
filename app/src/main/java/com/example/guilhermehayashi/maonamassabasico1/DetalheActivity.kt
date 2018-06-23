@@ -25,7 +25,7 @@ class DetalheActivity: AppCompatActivity() {
         updateButton.setOnClickListener {
             var nome = nomeEditText.text.toString()
             var descricao = descricaoEditText.text.toString()
-            var petRequest = ApiSaveRequest(dono=Api.user!!.id.toString(), nome=nome, descricao=descricao)
+            var petRequest = ApiSaveRequest(dono=Api.user!!.id.toString(), nome=nome)
             Api.update(pet!!.id.toString(), petRequest, {
                 finish()
             })

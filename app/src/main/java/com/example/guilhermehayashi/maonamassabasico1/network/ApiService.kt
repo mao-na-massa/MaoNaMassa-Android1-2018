@@ -77,10 +77,7 @@ open class ApiSaveRequest(
         @Expose var nome: String,
 
         @SerializedName("tipo")
-        @Expose var tipo: String? = null,
-
-        @SerializedName("descricao")
-        @Expose var descricao: String
+        @Expose var tipo: String? = null
 
 )
 

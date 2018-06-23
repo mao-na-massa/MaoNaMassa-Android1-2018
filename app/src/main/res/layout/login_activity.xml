@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#81D4FA"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:layout_marginBottom="50dp"
+            android:text="Rotina do Sucesso!"/>
 
         <EditText
             android:id="@+id/emailEditText"
@@ -28,9 +37,24 @@
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="#01579B"
+            android:textColor="#FFF"
             android:text="Login"/>
 
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/dataAtualTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="24dp"
+        android:text=""/>
 
 
 
