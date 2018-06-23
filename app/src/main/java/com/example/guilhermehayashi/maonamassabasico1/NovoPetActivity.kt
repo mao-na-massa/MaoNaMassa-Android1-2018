@@ -21,10 +21,10 @@ class NovoPetActivity: AppCompatActivity() {
             val nome = nomePetEditText.text.toString()
             val descricao = descricaoEditText.text.toString()
             val tipo = tipos[tipoSpinner.selectedItemPosition]
-            val dono = Api.user?.id
+             val dono = Api.user?.id
             val pet = ApiSaveRequest(dono!!.toString(), nome, tipo, descricao)
             Api.save(pet, {
-                finish()
+               finish()
             })
         }
     }

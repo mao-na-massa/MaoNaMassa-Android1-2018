@@ -11,7 +11,7 @@ import android.widget.TextView
 import com.example.guilhermehayashi.maonamassabasico1.modelos.Comida
 import com.example.guilhermehayashi.maonamassabasico1.modelos.Pessoa
 
-class PessoasAdapter(var pessoas: MutableList<Pessoa>, var context: Context): RecyclerView.Adapter<PessoasAdapter.PessoaViewHolder>() {
+class                                               PessoasAdapter(var pessoas: MutableList<Pessoa>, var context: Context): RecyclerView.Adapter<PessoasAdapter.PessoaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PessoaViewHolder {
         return PessoaViewHolder(LayoutInflater.from(context).inflate(R.layout.pessoa_layout_view_holder, parent, false))

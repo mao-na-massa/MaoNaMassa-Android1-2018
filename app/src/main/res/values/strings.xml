@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">MaoNaMassaBasico1</string>
     <string name="title_activity_segunda">SegundaActivity</string>
+
+    <string-array name="cursos">
+
+        <item>Matematica 1</item>
+        <item>Geografia</item>
+        <item>Portugues</item>
+
+    </string-array>
+
 </resources>
