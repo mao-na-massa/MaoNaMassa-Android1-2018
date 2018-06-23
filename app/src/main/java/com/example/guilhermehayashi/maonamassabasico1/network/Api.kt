@@ -6,8 +6,9 @@ import rx.schedulers.Schedulers
 
 object Api {
 
-    var url = "https://mnm-miaudote.herokuapp.com/"
-    const val path = "pets"
+    var url = "https://mnm-places.herokuapp.com/"
+    const val path = "places"
+    const val reviewPath = "reviews"
 
     var userToken: String = ""
     var user: User? = null
@@ -74,6 +75,19 @@ object Api {
                 }, {
                     Log.d("API", "Erro: ${it}")
                 })
+    }
+
+    fun evaluate(evaluation: ApiSaveReviewRequest, callback: (response: ApiDetailResponse) -> Unit) {
+        val retrofit = RetrofitHelper.getRetrofit(true)
+        retrofit?.create(ApiService::class.java)?.evaluate(evaluation)
+                ?.subscribeOn(Schedulers.io())
+                ?.observeOn(AndroidSchedulers.mainThread())
+                ?.subscribe({
+                    callback(it)
+                }, {
+                    Log.d("API", "Erro: ${it}")
+                })
+
     }
 
 }

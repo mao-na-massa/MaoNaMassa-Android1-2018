@@ -8,22 +8,18 @@ import kotlinx.android.synthetic.main.detalhe_activity.*
 
 class DetalheActivity: AppCompatActivity() {
 
-    var pet: ApiDetailResponse? = null
+    var place: ApiDetailResponse? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detalhe_activity)
-        pet = Gson().fromJson(intent.extras.get("PET") as String, ApiDetailResponse::class.java)
-        Api.get(pet!!.id.toString(), {
-            nomeEditText.setText(it.nome)
-            descricaoEditText.setText(it.descricao)
-        })
+        place = Gson().fromJson(intent.extras.get("PET") as String, ApiDetailResponse::class.java)
+        nomeEditText.setText(place?.name)
 
         updateButton.setOnClickListener {
-            var nome = nomeEditText.text.toString()
             var descricao = descricaoEditText.text.toString()
-            var petRequest = ApiSaveRequest(dono=Api.user!!.id.toString(), nome=nome, descricao=descricao)
-            Api.update(pet!!.id.toString(), petRequest, {
+            var evaluation = ApiSaveReviewRequest(place=place!!.id, score=5, comment=descricao)
+            Api.evaluate(evaluation, {
                 finish()
             })
         }

@@ -22,6 +22,9 @@ interface ApiService {
     @POST("auth/api/v1/login")
     fun login(@Body loginRequest: LoginRequest): Observable<LoginResponse>
 
+    @POST("evaluations/")
+    fun evaluate(@Body evaluation: ApiSaveReviewRequest): Observable<ApiDetailResponse>
+
 }
 
 open class LoginRequest(
@@ -77,19 +80,44 @@ open class ApiSaveRequest(
 
 open class ApiDetailResponse(
 
-        @SerializedName("dono")
-        @Expose var dono: User,
+        @SerializedName("reviews")
+        @Expose var reviews: List<ApiReviewResponse>,
 
-        @SerializedName("nome")
-        @Expose var nome: String,
+        @SerializedName("name")
+        @Expose var name: String,
 
-        @SerializedName("tipo")
-        @Expose var tipo: String,
+        @SerializedName("address")
+        @Expose var address: String,
 
-        @SerializedName("descricao")
-        @Expose var descricao: String,
+        @SerializedName("review_avg")
+        @Expose var review_avg: Double,
 
         @SerializedName("id")
         @Expose var id: Int
 
+)
+
+open class ApiSaveReviewRequest(
+        @SerializedName("comment")
+        @Expose var comment: String,
+
+        @SerializedName("score")
+        @Expose var score: Int,
+
+        @SerializedName("place")
+        @Expose var place: Int
+)
+
+open class ApiReviewResponse(
+        @SerializedName("comment")
+        @Expose var comment: String,
+
+        @SerializedName("score")
+        @Expose var score: Int,
+
+        @SerializedName("place")
+        @Expose var place: Int,
+
+        @SerializedName("user")
+        @Expose var user: User
 )

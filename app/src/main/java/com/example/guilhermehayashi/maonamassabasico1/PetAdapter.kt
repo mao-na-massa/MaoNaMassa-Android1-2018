@@ -40,7 +40,7 @@ class PetAdapter(var pets: MutableList<ApiDetailResponse>, var context: Context)
 
         fun configurar(pet: ApiDetailResponse) {
             this.pet = pet
-            nomeTextView?.text = pet.nome
+            nomeTextView?.text = pet.name
 
         }
 
