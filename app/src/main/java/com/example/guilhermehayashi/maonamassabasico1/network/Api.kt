@@ -77,9 +77,9 @@ object Api {
                 })
     }
 
-    fun evaluate(evaluation: ApiSaveReviewRequest, callback: (response: ApiDetailResponse) -> Unit) {
+    fun evaluate(review: ApiSaveReviewRequest, callback: (response: ApiDetailResponse) -> Unit) {
         val retrofit = RetrofitHelper.getRetrofit(true)
-        retrofit?.create(ApiService::class.java)?.evaluate(evaluation)
+        retrofit?.create(ApiService::class.java)?.review(review)
                 ?.subscribeOn(Schedulers.io())
                 ?.observeOn(AndroidSchedulers.mainThread())
                 ?.subscribe({

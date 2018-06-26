@@ -22,8 +22,8 @@ interface ApiService {
     @POST("auth/api/v1/login")
     fun login(@Body loginRequest: LoginRequest): Observable<LoginResponse>
 
-    @POST("evaluations/")
-    fun evaluate(@Body evaluation: ApiSaveReviewRequest): Observable<ApiDetailResponse>
+    @POST("api/reviews/")
+    fun review(@Body evaluation: ApiSaveReviewRequest): Observable<ApiDetailResponse>
 
 }
 
