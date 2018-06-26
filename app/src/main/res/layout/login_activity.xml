@@ -41,7 +41,6 @@
             android:textColor="#FFF"
             android:text="Login"/>
 
-
     </LinearLayout>
 
     <TextView

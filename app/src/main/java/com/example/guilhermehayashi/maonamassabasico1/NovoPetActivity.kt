@@ -16,12 +16,10 @@ class NovoPetActivity: AppCompatActivity() {
         //tipoSpinner.adapter = ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, tipos)
         criarButton.setOnClickListener {
             val nome = nomePetEditText.text.toString()
-           // val descricao = descricaoEditText.text.toString()
-            // val tipo = tipos[tipoSpinner.selectedItemPosition]
             val dono = Api.user?.id
             val pet = ApiSaveRequest(dono!!.toString(), nome)
             Api.save(pet, {
-                finish()
+               finish()
             })
         }
     }
