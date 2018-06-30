@@ -90,6 +90,27 @@ open class ApiDetailResponse(
         @Expose var descricao: String,
 
         @SerializedName("id")
-        @Expose var id: Int
+        @Expose var id: Int,
+
+        @SerializedName("imagens")
+        @Expose var images: List<ApiImageResponse>
+
+
+)
+
+open class ApiImageResponse(
+
+
+        @SerializedName("id")
+        @Expose var id: Int,
+
+        @SerializedName("pet")
+        @Expose var pet: Int,
+
+
+
+        @SerializedName("imagem")
+        @Expose var image: String
+
 
 )
