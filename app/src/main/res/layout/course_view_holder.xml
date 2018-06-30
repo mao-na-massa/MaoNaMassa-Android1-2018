@@ -16,12 +16,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 
- <!--   <Spinner
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/cursos">
 
-    </Spinner>-->
+    </Spinner>
 
     <Button
         android:id="@+id/joinButton"

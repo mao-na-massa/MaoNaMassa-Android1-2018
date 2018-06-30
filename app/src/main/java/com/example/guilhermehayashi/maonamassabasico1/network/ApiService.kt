@@ -94,5 +94,17 @@ open class ApiDetailResponse(
 
         @SerializedName("id")
         @Expose var id: Int
+)
+
+open class ApiTarefaResponse(
+
+        @SerializedName("id")
+        @Expose var id: Int,
+
+        @SerializedName("question")
+        @Expose var question: String,
+
+        @SerializedName("answer")
+        @Expose var answer: String
 
 )
