@@ -9,31 +9,33 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escolha um curso: "/>
+        android:text="Pergunta: "
+        android:textSize="20dp"/>
 
     <TextView
     android:id="@+id/nomeTextView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 
- <!--   <Spinner
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/cursos">
+        android:hint="Digíte sua resposta aqui!"
+        android:layout_marginBottom="30dp"
+        />
 
-    </Spinner>-->
 
-    <Button
-        android:id="@+id/joinButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="JOIN"/>
+    <!--<Button-->
+        <!--android:id="@+id/joinButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Resposta"/>-->
 
-    <Button
-        android:id="@+id/leaveButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LEAVE"/>
+    <!--<Button-->
+        <!--android:id="@+id/leaveButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="LEAVE"/>-->
 
 
 

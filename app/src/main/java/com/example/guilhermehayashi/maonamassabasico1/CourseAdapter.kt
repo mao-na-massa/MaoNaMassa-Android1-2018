@@ -42,12 +42,12 @@ class CourseAdapter(var courses: MutableList<ApiDetailResponse>, var context: Co
                     Log.d("JOIN", "JOINED COURSE")
                 })
             })
-            leaveButton = view.findViewById(R.id.leaveButton)
-            leaveButton?.setOnClickListener({
-                Api.leave(course!!.id.toString(), {
-                    Log.d("LEAVE", "LEFT COURSE")
-                })
-            })
+//            leaveButton = view.findViewById(R.id.leaveButton)
+//            leaveButton?.setOnClickListener({
+//                Api.leave(course!!.id.toString(), {
+//                    Log.d("LEAVE", "LEFT COURSE")
+//                })
+//            })
             view.setOnClickListener {
                 var intent = Intent(context, DetalheActivity::class.java)
                 intent.putExtra("PET", Gson().toJson(course))
