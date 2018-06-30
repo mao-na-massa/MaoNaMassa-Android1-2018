@@ -14,10 +14,12 @@ class DetalheActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detalhe_activity)
         place = Gson().fromJson(intent.extras.get("PET") as String, ApiDetailResponse::class.java)
-        nomeEditText.setText(place?.name)
+        tituloText.setText(place?.name)
+        descricaoText.setText(place?.address)
+        notaText.setText(place?.review_avg.toString())
 
         updateButton.setOnClickListener {
-            var descricao = descricaoEditText.text.toString()
+            var descricao = descricaoText.text.toString()
             var evaluation = ApiSaveReviewRequest(place=place!!.id, score=5, comment=descricao)
             Api.evaluate(evaluation, {
                 finish()

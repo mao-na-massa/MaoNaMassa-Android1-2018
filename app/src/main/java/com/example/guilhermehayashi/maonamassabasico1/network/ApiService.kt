@@ -93,7 +93,10 @@ open class ApiDetailResponse(
         @Expose var review_avg: Double,
 
         @SerializedName("id")
-        @Expose var id: Int
+        @Expose var id: Int,
+
+        @SerializedName("photo")
+        @Expose var foto:String
 
 )
 

@@ -2,18 +2,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/nomeEditText"
+    <TextView
+        android:id="@+id/tituloText"
         android:layout_width="match_parent"
         android:layout_height="60dp" />
 
+    <ImageView
+        android:id="@+id/mapaImagem"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@id/tituloText"
+        />
+
+    <TextView
+        android:id="@+id/descricaoText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/mapaImagem" />
+
+    <TextView
+        android:id="@+id/notaText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/descricaoText" />
+
+
+
     <EditText
-        android:id="@+id/descricaoEditText"
+        android:id="@+id/comentarioEditText"
         android:layout_width="match_parent"
         android:maxLines="10"
         android:inputType="textMultiLine"
         android:layout_height="200dp"
-        android:layout_below="@id/nomeEditText"/>
+        android:layout_below="@id/notaText"/>
 
     <Button
         android:id="@+id/updateButton"
