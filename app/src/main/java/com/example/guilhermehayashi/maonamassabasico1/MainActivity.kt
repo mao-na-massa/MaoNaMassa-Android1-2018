@@ -9,15 +9,21 @@ import android.widget.ArrayAdapter
 import com.example.guilhermehayashi.maonamassabasico1.modelos.Comida
 import com.example.guilhermehayashi.maonamassabasico1.modelos.Pessoa
 import com.example.guilhermehayashi.maonamassabasico1.network.*
+import kotlinx.android.synthetic.main.activity_lista_tarefas.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.login_activity.*
 import kotlinx.android.synthetic.main.main_layout.*
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     var cursos: MutableList<ApiDetailResponse> = mutableListOf()
     var cursosNomes: MutableList<String> = mutableListOf()
+    var tarefas: MutableList<ApiDetailResponse> = mutableListOf()
+    var date = Calendar.getInstance()
 
     object companion {
         val nameKey: String = "NOME_DO_USUARIO"
@@ -27,11 +33,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
 
-
- /*       novoPetButton.setOnClickListener {
-            val intent = Intent(this, NovoPetActivity::class.java)
-            startActivity(intent)
-        }*/
+        var dia = SimpleDateFormat("dd").format(date.time)
+        Log.d("Data", dia.toString())
 
 
 
@@ -50,10 +53,17 @@ class MainActivity : AppCompatActivity() {
             })
         })
 
+        verTarefas.setOnClickListener({
+            val intent = Intent(this, ListaTarefas::class.java)
+            startActivity(intent)
+
+
+        })
     }
 
     override fun onResume() {
         super.onResume()
+
         Api.list {
             cursos = it.results.toMutableList()
             cursosNomes.removeAll {true}

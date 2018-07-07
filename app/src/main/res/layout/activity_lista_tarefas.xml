@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/botaoVoltarDia"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Voltar"/>
+
+        <TextView
+            android:id="@+id/diaTarefas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/botaoAvancarDia"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Avançar"/>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listaTarefas"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

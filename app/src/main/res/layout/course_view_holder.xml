@@ -9,32 +9,49 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escolha um curso: "/>
+        android:text="Pergunta: "
+        android:textSize="20dp"
+        android:layout_margin="@dimen/fab_margin"/>
 
     <TextView
     android:id="@+id/nomeTextView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fab_margin"/>
 
-    <Spinner
+    <EditText
+        android:id="@+id/respostaEditText"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"/>
+
+    <Button
+        android:id="@+id/botaoResposta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="Responder"/>
+
+
+    <!--<Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/cursos">
 
-    </Spinner>
+    </Spinner>-->
 
-    <Button
-        android:id="@+id/joinButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="JOIN"/>
+    <!--<Button-->
+        <!--android:id="@+id/joinButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="JOIN"/>-->
 
-    <Button
-        android:id="@+id/leaveButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LEAVE"/>
-
+    <!--<Button-->
+        <!--android:id="@+id/leaveButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="LEAVE"/>-->
 
 
 

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import com.example.guilhermehayashi.maonamassabasico1.network.Api
 import com.example.guilhermehayashi.maonamassabasico1.network.ApiDetailResponse
@@ -33,33 +34,29 @@ class CourseAdapter(var courses: MutableList<ApiDetailResponse>, var context: Co
         var joinButton: Button? = null
         var leaveButton: Button? = null
         var course: ApiDetailResponse? = null
+        var resposta: Button? = null
+        var respostaEditText: EditText? = null
 
         init {
             nomeTextView = view.findViewById(R.id.nomeTextView)
-            joinButton = view.findViewById(R.id.joinButton)
-            joinButton?.setOnClickListener({
-                Api.join(course!!.id.toString(), {
-                    Log.d("JOIN", "JOINED COURSE")
-                })
+            resposta = view.findViewById(R.id.botaoResposta)
+            respostaEditText = view.findViewById(R.id.respostaEditText)
+            resposta?.setOnClickListener({
+                if(respostaEditText!!.text.toString() == course!!.answer) {
+                    resposta?.setBackgroundColor(context.resources.getColor(R.color.green))
+                } else {
+                    resposta?.setBackgroundColor(context.resources.getColor(R.color.colorAccent))
+                }
             })
-            leaveButton = view.findViewById(R.id.leaveButton)
-            leaveButton?.setOnClickListener({
-                Api.leave(course!!.id.toString(), {
-                    Log.d("LEAVE", "LEFT COURSE")
-                })
-            })
-            view.setOnClickListener {
-                var intent = Intent(context, DetalheActivity::class.java)
-                intent.putExtra("PET", Gson().toJson(course))
-                context.startActivity(intent)
-            }
+
         }
 
         fun configurar(course: ApiDetailResponse) {
             this.course = course
-            nomeTextView?.text = course.nome
+            nomeTextView?.text = course.question
 
         }
+
 
     }
 

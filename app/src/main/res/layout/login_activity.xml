@@ -19,12 +19,14 @@
             android:text="Rotina do Sucesso!"/>
 
         <EditText
+            android:text="teste"
             android:id="@+id/emailEditText"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:hint="Entre seu login"/>
 
         <EditText
+            android:text="123456teste"
             android:id="@+id/senhaEditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
