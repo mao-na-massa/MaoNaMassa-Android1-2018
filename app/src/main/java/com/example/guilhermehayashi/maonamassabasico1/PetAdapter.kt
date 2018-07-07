@@ -44,12 +44,20 @@ class PetAdapter(var pets: MutableList<ApiDetailResponse>, var context: Context)
         }
 
         fun configurar(pet: ApiDetailResponse) {
+            var imageUrl: String? = null
             this.pet = pet
-            nomeTextView?.text = pet.nome
+            nomeTextView?.text = "Nome: ${pet.nome}"
             pet.images.firstOrNull()?.image?.let { image ->
-                Picasso.get().load(image).error(android.R.drawable.stat_notify_error).into(imageView)
+               imageUrl = "http://mnm-miaudote.herokuapp.com" + image
             }
 
+
+            Picasso.get()
+                    .load(imageUrl)
+                    .placeholder(R.drawable.ic_miaudote)
+                    .into(imageView);
+
+            //.error(android.R.drawable.stat_notify_error).into(imageView)
         }
 
 //        fun configurar(pet: ApiImageResponse) {
