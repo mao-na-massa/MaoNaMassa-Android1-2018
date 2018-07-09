@@ -1,46 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tituloText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/updateButton">
 
-    <ImageView
-        android:id="@+id/mapaImagem"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_below="@id/tituloText"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/descricaoText"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/mapaImagem" />
+            <TextView
+                android:id="@+id/tituloText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/notaText"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/descricaoText" />
+            <ImageView
+                android:id="@+id/imagem"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/tituloText"
+                />
+
+            <TextView
+                android:id="@+id/descricaoText"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/notaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descricaoText" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listaReviews"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
 
 
 
-    <EditText
-        android:id="@+id/comentarioEditText"
-        android:layout_width="match_parent"
-        android:maxLines="10"
-        android:inputType="textMultiLine"
-        android:layout_height="200dp"
-        android:layout_below="@id/notaText"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/updateButton"
-        android:text="Atualizar"
+        android:text="Avaliar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:id="@+id/avaliarlayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:elevation="5dp">
+
+        <TextView
+            android:text="Avalie este local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/numbertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+
+
+        <EditText
+            android:id="@+id/comentariotext"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:inputType="textMultiLine"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/cancelarbutton"
+                android:text="cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/okbutton"
+                android:text="ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </RelativeLayout>

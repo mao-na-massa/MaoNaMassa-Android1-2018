@@ -22,7 +22,7 @@ interface ApiService {
     @POST("auth/api/v1/login")
     fun login(@Body loginRequest: LoginRequest): Observable<LoginResponse>
 
-    @POST("evaluations/")
+    @POST("api/reviews/")
     fun evaluate(@Body evaluation: ApiSaveReviewRequest): Observable<ApiDetailResponse>
 
 }
@@ -47,7 +47,7 @@ open class User(
         @SerializedName("id")
         @Expose var id: Int,
 
-        @SerializedName("nome")
+        @SerializedName("name")
         @Expose var nome: String,
 
         @SerializedName("email")
