@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.guilhermehayashi.maonamassabasico1.network.ApiDetailResponse
@@ -35,11 +36,13 @@ class PetAdapter(var pets: MutableList<ApiDetailResponse>, var context: Context)
         var nomeTextView: TextView? = null
         var imageView: ImageView? = null
         var pet: ApiDetailResponse? = null
+        var btn: Button? = null
 
         init {
            nomeTextView = view.findViewById(R.id.nomeTextView)
+            btn = view.findViewById(R.id.btn_ver_mais)
           imageView = view.findViewById(R.id.imageView)
-            view.setOnClickListener {
+            btn?.setOnClickListener {
                 var intent = Intent(context, DetalheActivity::class.java)
                 intent.putExtra("PET", Gson().toJson(pet))
                 context.startActivity(intent)
