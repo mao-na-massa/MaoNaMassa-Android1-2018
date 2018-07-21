@@ -39,8 +39,8 @@
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#01579B"
             android:textColor="#FFF"
+            android:background="@drawable/ripple_login"
             android:text="Login"/>
 
     </LinearLayout>

@@ -34,12 +34,18 @@
         android:id="@+id/entrarButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/ripple_login"
+        android:textColor="#FFF"
+        android:layout_margin="5dp"
         android:text="Entrar"/>
 
     <Button
         android:id="@+id/sairButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/ripple_login"
+        android:textColor="#FFF"
+        android:layout_margin="5dp"
         android:text="Sair"/>
 
 
@@ -47,6 +53,9 @@
             android:id="@+id/verTarefas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/ripple_login"
+            android:textColor="#FFF"
+            android:layout_margin="5dp"
             android:text="Ver Tarefas"
             />
 

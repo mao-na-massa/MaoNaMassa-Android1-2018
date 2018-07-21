@@ -3,6 +3,7 @@ package com.example.guilhermehayashi.maonamassabasico1
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
+import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -49,11 +50,22 @@ class CourseAdapter(var courses: MutableList<ApiDetailResponse>, var context: Co
                 }
             })
 
+
+
+
         }
 
         fun configurar(course: ApiDetailResponse) {
             this.course = course
             nomeTextView?.text = course.question
+
+
+            val numeric = course.answer.matches("-?\\d+(\\.\\d+)?".toRegex())
+
+
+            if(numeric) {
+                respostaEditText?.inputType = InputType.TYPE_CLASS_NUMBER
+            }
 
         }
 

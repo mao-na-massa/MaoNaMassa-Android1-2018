@@ -13,7 +13,7 @@ object Api {
     var userToken: String = ""
     var user: User? = null
 
-    fun login(email: String, password: String, callback: (response: LoginResponse) -> Unit) {
+    fun login(email: String, password: String, callback: (response: LoginResponse) -> Unit, callbackError: (error: Throwable) -> Unit) {
         val retrofit = RetrofitHelper.getRetrofit(false)
         retrofit?.create(ApiService::class.java)
                 ?.login(LoginRequest(email, password))
@@ -24,7 +24,7 @@ object Api {
                     Api.userToken = it.token
                     callback(it)
                 }, {
-                    Log.d("API", "Erro: ${it}")
+                    callbackError(it)
                 })
     }
 

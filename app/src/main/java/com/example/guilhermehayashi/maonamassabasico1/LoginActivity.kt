@@ -1,5 +1,6 @@
 package com.example.guilhermehayashi.maonamassabasico1
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -20,15 +21,22 @@ class LoginActivity: AppCompatActivity() {
 
         dataAtualTextView.setText(dia+" de "+mes+" de "+ ano)
 
+        var loadingDialog = ProgressDialog(this)
+        loadingDialog.setTitle("Carregando...")
+        loadingDialog.isIndeterminate = true
 
 
         loginButton.setOnClickListener {
+            loadingDialog.show()
             val email = emailEditText.text.toString()
             val senha = senhaEditText.text.toString()
             Api.login(email, senha, {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
+                loadingDialog.dismiss()
+            }, {
+                loadingDialog.dismiss()
             })
         }
     }
