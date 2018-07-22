@@ -12,7 +12,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:orientation="vertical"
         android:padding="3dp"
         android:background="#F0FFFF"
-        android:elevation="6dp">
+        android:elevation="12dp">
     <TextView
     android:id="@+id/usuarioText"
     android:layout_width="wrap_content"
