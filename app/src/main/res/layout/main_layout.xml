@@ -2,48 +2,36 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/dog"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent" />
+    </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/pokemonList"
+        android:id="@+id/catiorList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        tools:listitem="@layout/pokemon_view_holder"
-        android:layout_centerInParent="true"/>
+        tools:listitem="@layout/pet_view_holder" />
 
-    <LinearLayout
-        android:id="@+id/barraNav"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignBottom="@id/pokemonList">
-
-        <Button
-            android:id="@+id/Lista"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="@dimen/fab_margin"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:text="Lista" />
-
-        <Button
-            android:id="@+id/novoPetButton"
-            android:layout_width="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:text="Doe" />
-
-        <Button
-            android:id="@+id/Perfil"
-            android:layout_width="wrap_content"
-            android:layout_marginRight="@dimen/fab_margin"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:text="Perfil" />
-
-    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_petadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add" />
 
 
 </RelativeLayout>

@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_miaudote"
+        android:icon="@drawable/ic_log"
         android:label="MiAudote"
-        android:roundIcon="@drawable/ic_miaudote"
+        android:roundIcon="@drawable/ic_log"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">

@@ -3,47 +3,121 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:weightSum="2">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/nomePetEditText"
+
+        <ImageView
             android:layout_width="match_parent"
-            android:hint="Nome do Pet"
-            android:layout_height="55dp" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dog" />
+
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/formLayout"
+        android:layout_marginBottom="15dp"
+    >
+
+    <Button
+        android:id="@+id/adc_img_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginVertical="5dp"
+        android:textAllCaps="false"
+        android:textSize="2.5mm"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/rounded_corner_btn_circle"
+        />
+    <Button
+        android:id="@+id/adc_img_Button2"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginVertical="5dp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="2.5mm"
+        android:background="@drawable/rounded_corner_btn_circle"
+        />
+
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="76dp"
+        android:orientation="vertical">
+
+
 
         <Spinner
-            android:id="@+id/tipoSpinner"
+            android:id="@+id/especieEditText"
             android:layout_width="match_parent"
-            android:layout_height="55dp" />
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corner_box_white"
+            />
 
         <EditText
-            android:id="@+id/localizacaoEditText"
+            android:layout_marginTop="5dp"
+            android:id="@+id/nomePetEditText"
             android:layout_width="match_parent"
-            android:hint="Localização"
-            android:layout_height="55dp" />
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corner_box_white"
+            android:hint=" Nome"
+            android:layout_marginBottom="5dp"/>
 
         <EditText
             android:id="@+id/descricaoEditText"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:maxLines="10"
-            android:inputType="textMultiLine"
-            android:scrollbars="vertical"
-            android:layout_weight="1"/>
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corner_box_white"
+            android:hint=" Descricão"
+            android:layout_marginBottom="5dp"
+            />
+
+
+        <EditText
+            android:id="@+id/racaEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corner_box_white"
+            android:hint=" Raça"
+            android:layout_marginBottom="5dp"
+            />
+
+
+        <EditText
+        android:id="@+id/idadeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corner_box_white"
+        android:hint=" Idade"
+            android:layout_marginBottom="5dp"
+        />
+
+        <Button
+            android:id="@+id/confirmarButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="2.5mm"
+            android:background="@drawable/rounded_corner_btn_white_blue"
+            android:text="Confirmar" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/criarButton"
-        android:text="Save"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp" />
 
 
 </RelativeLayout>
