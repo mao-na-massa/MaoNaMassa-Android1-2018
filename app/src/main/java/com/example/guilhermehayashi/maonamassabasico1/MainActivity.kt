@@ -17,11 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_layout)
 
 
-        novoLugarButton.setOnClickListener {
-            val intent = Intent(this, NovoPetActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 
     override fun onResume() {

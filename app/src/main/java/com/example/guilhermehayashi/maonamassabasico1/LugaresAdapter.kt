@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso
 class LugaresAdapter(var pets: MutableList<ApiDetailResponse>, var context: Context): RecyclerView.Adapter<LugaresAdapter.LugarViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LugarViewHolder {
-        return LugarViewHolder(LayoutInflater.from(context).inflate(R.layout.pet_view_holder, parent, false), context)
+        return LugarViewHolder(LayoutInflater.from(context).inflate(R.layout.place_view_holder, parent, false), context)
     }
 
     override fun getItemCount(): Int {

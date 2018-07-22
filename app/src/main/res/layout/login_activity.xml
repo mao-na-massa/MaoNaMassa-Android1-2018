@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_dc"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
@@ -27,6 +28,7 @@
             android:id="@+id/emailEditText"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:background="#F0FFFF"
             android:hint="Entre seu login"/>
 
         <EditText
@@ -36,6 +38,7 @@
             android:hint="Entre sua senha"
             android:inputType="textPassword"
             android:singleLine="true"
+            android:background="#F0FFFF"
             android:imeOptions="actionDone"/>
 
         <Button
