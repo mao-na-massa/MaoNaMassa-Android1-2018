@@ -14,7 +14,7 @@ class LoginActivity: AppCompatActivity() {
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val senha = senhaEditText.text.toString()
-            Api.login("bernardo@ckl.io", "1234qwer", {
+            Api.login(email, senha, {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()

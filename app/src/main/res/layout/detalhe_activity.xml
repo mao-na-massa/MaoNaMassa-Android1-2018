@@ -19,7 +19,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="320dp">
+                android:layout_height="248dp">
 
                 <ImageView
                     android:id="@+id/imagem"
@@ -123,6 +123,9 @@
             android:id="@+id/numbertext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:digits="12345"
+            android:maxLength="1"
+            android:hint="Avalie de 1 à 5"
             android:inputType="number"/>
 
 
@@ -131,7 +134,8 @@
             android:id="@+id/comentariotext"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:inputType="textMultiLine"/>
+            android:inputType="textMultiLine"
+            android:hint="Escreva um comentário"/>
 
         <LinearLayout
             android:layout_width="match_parent"

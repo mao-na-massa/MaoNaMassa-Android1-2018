@@ -18,7 +18,8 @@ class DetalheActivity: AppCompatActivity() {
         place = Gson().fromJson(intent.extras.get("LUGAR") as String, ApiDetailResponse::class.java)
         tituloText.setText(place?.name)
         descricaoText.setText("Endereço: ${place?.address}")
-        notaText.setText("Nota: ${place?.review_avg.toString()}")
+        var notaTexto: String = "Nota: %.2f".format(place?.review_avg ?: 5.0)
+        notaText.setText(notaTexto)
 
         listaReviews.adapter = ReviewsAdapter(place!!.reviews.toMutableList(), this)
 

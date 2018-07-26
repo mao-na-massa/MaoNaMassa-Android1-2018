@@ -10,29 +10,62 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="3dp"
-        android:background="#F0FFFF"
+        android:padding="5dp"
+        android:background="#E0F1F9"
         android:elevation="12dp">
-    <TextView
-    android:id="@+id/usuarioText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="left"
-    android:text="Nomes dos Lugares"/>
 
-    <TextView
-        android:id="@+id/scoreText"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Nomes dos Lugares"/>
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/usuarioText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Usuarios"
+            android:layout_weight="7"/>
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:text="Notas"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#CACACA"
+                android:layout_weight="1">
+
+            </View>
+
+
+        </LinearLayout>
+
+
+
 
     <TextView
         android:id="@+id/commentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:text="Nomes dos Lugares"/>
+        android:text="Nomes dos Lugares"
+        android:layout_marginBottom="8dp"/>
 
     </LinearLayout>
 

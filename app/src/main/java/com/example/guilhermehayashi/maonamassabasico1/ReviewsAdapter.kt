@@ -36,7 +36,7 @@ class ReviewsAdapter(var reviews: MutableList<ApiReviewResponse>, var context: C
 
         fun bind(review: ApiReviewResponse) {
             this.commentText?.text = "Comentario: ${review.comment}"
-            this.scoreText?.text = "Score: ${review.score.toString()}"
+            this.scoreText?.text = "Nota: ${review.score.toString()}"
             this.userText?.text = "Por usuario: ${review.user.nome}"
 
         }
