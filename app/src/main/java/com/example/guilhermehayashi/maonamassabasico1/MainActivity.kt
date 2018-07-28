@@ -17,6 +17,10 @@ import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import java.text.SimpleDateFormat
 import java.util.*
+import android.widget.Toast
+import android.content.DialogInterface
+import android.support.v7.app.AlertDialog
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             Api.join(curso.id.toString(), {
                 Log.d("JOIN", "JOINED COURSE")
             })
+            entrouCurso()
 
         })
 
@@ -51,19 +56,18 @@ class MainActivity : AppCompatActivity() {
             Api.leave(curso.id.toString(), {
                 Log.d("LEAVE", "LEFT COURSE")
             })
+            saiuCurso()
         })
 
         verTarefas.setOnClickListener({
             val intent = Intent(this, ListaTarefas::class.java)
             startActivity(intent)
 
-
         })
     }
 
     override fun onResume() {
         super.onResume()
-
         Api.list {
             cursos = it.results.toMutableList()
             cursosNomes.removeAll {true}
@@ -72,6 +76,37 @@ class MainActivity : AppCompatActivity() {
             })
             cursosSpinner.adapter = ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, cursosNomes)
         }
+    }
+
+
+
+
+    private fun entrouCurso() {
+        var alerta: AlertDialog? = null
+        //Cria o gerador do AlertDialog
+        val builder = AlertDialog.Builder(this)
+        //define o titulo
+        builder.setTitle("Conectado!")
+        //define a mensagem
+        builder.setMessage("Você entrou no curso!")
+        //cria o AlertDialog
+        alerta = builder.create()
+        //Exibe
+        alerta!!.show()
+    }
+
+    private fun saiuCurso() {
+        var alerta: AlertDialog? = null
+        //Cria o gerador do AlertDialog
+        val builder = AlertDialog.Builder(this)
+        //define o titulo
+        builder.setTitle("Desconectado!")
+        //define a mensagem
+        builder.setMessage("Você saiu do curso!")
+        //cria o AlertDialog
+        alerta = builder.create()
+        //Exibe
+        alerta!!.show()
     }
 
 }
